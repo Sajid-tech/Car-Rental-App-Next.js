@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { ClerkProvider , SignIn } from '@clerk/nextjs'
 import { SignedIn } from '@clerk/nextjs/app-beta'
 import { SignedOut } from '@clerk/nextjs/app-beta/client'
+import Navbar from '@/components/NavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <SignedIn>
+        <Navbar/>
         {children}
         </SignedIn>
         <SignedOut>
