@@ -5,8 +5,12 @@ import { ClerkProvider , SignIn } from '@clerk/nextjs'
 import { SignedIn } from '@clerk/nextjs/app-beta'
 import { SignedOut } from '@clerk/nextjs/app-beta/client'
 import Navbar from '@/components/NavBar'
+import { Outfit } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+
+// from here you can change the font
+// const inter = Inter({ subsets: ['latin'] })
+const inter = Outfit({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
